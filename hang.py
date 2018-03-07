@@ -11,7 +11,7 @@ comic_sans=font.Font(family='Comic Sans MS',size=16)
 canvas = Canvas(window, width=700, height=600)
 canvas.pack()
 
-im = Image.open('4.png')  # background image
+im = Image.open('graphics/background.png')  # background image
 canvas.image = ImageTk.PhotoImage(im)  # Put the image into a canvas compatible class
 canvas.create_image(0, 0, image=canvas.image, anchor='center')  # Add the image to the canvas
 
@@ -97,32 +97,32 @@ def letter_press(letter, chosen_word, letters_left):  # called when letter press
 def draw_penalty(chosen_word):  # wrong guess
     global penalties_left
     if penalties_left == 6:
-        pic = PhotoImage(file='headd.png')
+        pic = PhotoImage(file='graphics/head.png')
         head=pic.subsample(2)
         canvas.create_image(195, 270, image=head)
         body_parts.append(head)
     elif penalties_left == 5:
-        pic = PhotoImage(file='bodd.png')
+        pic = PhotoImage(file='graphics/body.png')
         body = pic.subsample(3)
         canvas.create_image(195, 393, image=body)
         body_parts.append(body)
     elif penalties_left == 4:
-        pic = PhotoImage(file='Picture1.png')
+        pic = PhotoImage(file='graphics/leftarm.png')
         larm = pic.subsample(5)
         canvas.create_image(120, 371, image=larm)
         body_parts.append(larm)
     elif penalties_left == 3:
-        pic = PhotoImage(file='Picture2.png')
+        pic = PhotoImage(file='graphics/rightarm.png')
         rarm = pic.subsample(5)
         canvas.create_image(270, 369, image=rarm)
         body_parts.append(rarm)
     elif penalties_left == 2:
-        pic = PhotoImage(file='Picture4.png')
+        pic = PhotoImage(file='graphics/rightleg.png')
         rleg = pic.subsample(5)
         canvas.create_image(223, 510, image=rleg)
         body_parts.append(rleg)
     else:
-        pic = PhotoImage(file='Picture3.png')
+        pic = PhotoImage(file='graphics/leftleg.png')
         lleg = pic.subsample(5)
         canvas.create_image(153, 509, image=lleg)
         body_parts.append(lleg)
