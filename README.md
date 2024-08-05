@@ -1,10 +1,9 @@
 # Hangman 
-Simple hangman game with a GUI created using Python tkinter :)
+Simple hangman game with a GUI created using Python tkinter
 
 Words are stored in a list, hints in a dictionary. Guessing a word correctly increases your score by one.
 Wrong guesses have no penalty. Pressing the next button will skip to the next word.
 
-Just clone the repository and run `python hang.py`
 
 ## Correct guess:
 
